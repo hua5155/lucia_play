@@ -14,8 +14,8 @@ model AuthUser {
   id           String        @id @unique
   auth_session AuthSession[]
   auth_key     AuthKey[]
-  name         String
-  email        String
+  username     String        @unique
+  email        String        @unique
 
   @@map("user")
 }
