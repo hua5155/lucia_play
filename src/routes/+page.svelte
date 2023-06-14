@@ -22,8 +22,10 @@
 <div class="mx-auto mt-10 w-fit">
 	{#if user?.userName}
 		<p>{`username : ${user?.userName}`}</p>
-		<form action="?/logOut" method="post" use:enhance={handleSubmit}>
-			<button class="rounded-lg bg-blue-500 px-2 py-1" type="submit">Sign out</button>
+		<form method="post">
+			<button class="rounded-lg bg-blue-500 px-2 py-1" formaction="/logout" type="submit">
+				Logout
+			</button>
 		</form>
 		<form action="?/deleteUser&userId={user?.userId}" method="post" use:enhance={handleSubmit}>
 			<button class="rounded-lg bg-red-500 px-2 py-1" type="submit">Delete user</button>

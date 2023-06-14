@@ -8,12 +8,6 @@ export const load: PageServerLoad = async ({ locals }) => {
 };
 
 export const actions: Actions = {
-  logOut: async ({ locals }) => {
-    const { session } = await locals.auth.validateUser()
-    if (!session) return fail(401)
-    await auth.invalidateSession(session.sessionId)
-    locals.auth.setSession(null)  // remove cookie
-  },
   deleteUser: async ({ url }) => {
     const userId = url.searchParams.get('userId')
     if (userId === null) return
