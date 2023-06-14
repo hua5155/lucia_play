@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	export const registerSchema = z.object({
 		username: z.string().min(0, { message: "Username can't be empty." }).trim(),
 		email: z.string().email({ message: 'Invalid email.' }).trim(),

@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	export const loginSchema = z.object({
 		email: z.string().email({ message: 'Invalid email.' }).trim(),
 		password: z.string().trim()

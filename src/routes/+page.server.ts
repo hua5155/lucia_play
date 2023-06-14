@@ -8,9 +8,9 @@ export const load: PageServerLoad = async ({ locals }) => {
 };
 
 export const actions: Actions = {
-  deleteUser: async ({ url }) => {
-    const userId = url.searchParams.get('userId')
-    if (userId === null) return
-    const user = auth.deleteUser(userId!);
-  }
+  // deleteUser: async ({ url }) => {
+  //   const userId = url.searchParams.get('userId')
+  //   if (userId === null) return
+  //   const user = auth.deleteUser(userId);
+  // }
 };
