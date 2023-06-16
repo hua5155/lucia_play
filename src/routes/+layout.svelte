@@ -2,7 +2,7 @@
 	import '../app.css';
 	import type { PageData } from './$types';
 
-	export let data: PageData;
+	export let data;
 </script>
 
 <main class="h-fit min-h-screen w-screen max-w-full bg-black px-[5%] py-[3%] text-xl text-white">
@@ -14,7 +14,7 @@
 			<a href="/login">Login</a>
 			<a href="/register">Sign up</a>
 		{:else}
-			<a href={`/${data.user.userName}`}>Profile</a>
+			<a href={`/user/${data.user.userName}`}>Profile</a>
 			<form method="post">
 				<button formaction="/logout" type="submit">Logout</button>
 			</form>
